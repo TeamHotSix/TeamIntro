@@ -139,7 +139,7 @@ body {
 
 .sns-content {
     display: flex;
-    gap: 50%;
+    gap: 90px;
 }
 
 ::-webkit-scrollbar {
