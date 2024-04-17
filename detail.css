@@ -114,7 +114,7 @@ body {
 
 
 .container-right .about-me-content {
-    margin-top: 60px;
+    margin-top: 35px;
 
 }
 
@@ -139,7 +139,7 @@ body {
 
 .sns-content {
     display: flex;
-    gap: 50%;
+    gap: 90px;
 }
 
 ::-webkit-scrollbar {
@@ -147,5 +147,5 @@ body {
 }
 
 .overflow-scroll {
-    height: 65px;
+    height: 100px;
 }
