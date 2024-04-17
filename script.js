@@ -1,5 +1,4 @@
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const circleElements = document.querySelectorAll('.circle');
   const squareElements = document.querySelectorAll('.square');
