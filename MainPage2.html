@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
@@ -82,7 +82,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background-color: #ffffff;
 
         }
 
@@ -90,7 +90,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+
         }
 
         .container {
@@ -104,7 +104,7 @@
         .left-column {
             width: 50%;
             padding: 20px;
-            margin: 10px 10px;
+            margin: 10px 3%;
             height: 100%;
         }
 
@@ -114,7 +114,7 @@
 
             margin: 30px 10px 10px 10px;
             border-radius: 5px;
-            background-color: #000000;
+
 
         }
 
@@ -126,7 +126,7 @@
 
         h2 {
             margin-top: 10;
-            color: aliceblue;
+            color: black;
             font-family: Platypi;
             font-weight: 500;
             font-style: italic;
@@ -193,22 +193,14 @@
         .team-tags3 {
             color: black;
         }
-
-        #TIL-box {
-            z-index: 0;
-            border: 1px solid #ccc;
-            background-color: #f0f0f0;
-            height: 68vh;
-
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 10px 30px 10px;
-        }
+        
+        
 
 
         button {
+            
             display: block;
-            margin: 30px 30px;
+            margin: 30px 4%;
             height: 50px;
             padding: 8px 8px;
             width: 10%;
@@ -227,10 +219,27 @@
             color: white;
             font-size: 20px;
         }
+        #boxbox{
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+            margin: 0px auto;
+            width: 30vw;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #TIL-box {
+            z-index: 0;
+            
+            
+            width: 100%;
+            height: 56vh;
 
-        .TeamPic {
-            border-radius: 50%;
-            width: 60%;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 0 auto;
         }
 
         .FlipCardcontainer {
@@ -268,10 +277,10 @@
 
         .card {
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-            width: 900px;
-            height: 600px;
+            width: 26.5vw;
+            height: 50vh;
             /* 카드 높이 조정 */
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 10px;
             margin: 10px;
             font-size: 30px;
@@ -284,26 +293,35 @@
             transition: all 0.5s;
         }
 
-        .card p,
-        .card a {
-            word-wrap: break-word;
-            /* 텍스트가 카드의 너비에 맞게 줄 바꿈되도록 설정 */
-        }
-
-        .card img {
+        .TeamPic {
             border-radius: 50%;
-            width: 300px;
-            /* 원하는 크기로 설정 */
-            height: 300px;
+            height: 25vh;
             /* 원하는 크기로 설정 */
             object-fit: cover;
             /* 이미지가 고정된 크기에 맞추어질 수 있도록 설정 */
-            margin-top: -20px;
-            /* 이미지를 위로 이동시키는 상단 마진 설정 */
+            margin-top: 
+            width: 60%;
         }
 
-        .card p {
-            margin-top: 20px;
+        
+        .TIL-Img{
+            border: 1px solid #ccc;
+            border-radius: 0%;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            width: 80px;
+            /* 원하는 크기로 설정 */
+            height: 30px;
+            /* 원하는 크기로 설정 */
+            object-fit: cover;
+            
+        }
+
+        .card p
+         {
+            font-size: 20px;
+            word-wrap: break-word;
+            margin-top: 30px;
+            color: black
         }
 
 
@@ -316,8 +334,8 @@
         .sliderBtn {
             width: 40px;
             height: 40px;
-            border-top: 10px solid black;
-            border-left: 10px solid black;
+            border-top: 10px solid rgb(0, 0, 0);
+            border-left: 10px solid rgb(0, 0, 0);
             position: absolute;
             cursor: pointer;
             top: 40%;
@@ -355,7 +373,7 @@
             <div class="team-info-box2">
                 <div class="team-tags2">
                     <p>우리 팀, 함께 대기업의 문을 열어요!</p>
-                    <p>함께 뛰어난 결과물을 이뤄내며 성장하고, 꿈을 이루는 여정을 함께 합니다.</p>
+                    <p>함께 성장하고, 꿈을 이루는 여정을 함께 합니다.</p>
                     <p>함께라면 더 높이, 함께라면 더 멀리!!</p>
 
                 </div>
@@ -373,53 +391,56 @@
             </div>
         </div>
         <div class="right-column">
-            <!--<div class="#TIL-box-title">
-                TIL Link 
-            </div>-->
-            <div id="TIL-box">
-                <div class="FlipCardcontainer">
-                    <div class="slider-container">
-                        <span class="slider-leftBtn sliderBtn"></span>
-                        <div class="card-container" id="slider">
-                            <div class="card">
-                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
-                                    alt="TeamPicture">
-                                <p>이름1</p>
-                                <a href="#" class="Green-button">TIL 주소1</a>
+            <div id="boxbox">
+                
+                <div id="TIL-box">
+                    
+                    <div class="FlipCardcontainer">
+                        <div class="slider-container">
+                            <span class="slider-leftBtn sliderBtn"></span>
+                            <div class="card-container" id="slider">
+                                <div class="card">
+                                    <img class="TeamPic" src="./kimchaemin/image/profile.png"
+                                        alt="TeamPicture">
+                                    <p>김채민</p>
+                                    <a href="https://chaemin0707.tistory.com" class="Green-button"><img class = "TIL-Img" src ="./img/TIL.png"></a>
 
-                            </div>
-                            <div class="card">
-                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
-                                    alt="TeamPicture">
-                                <p>이름2</p>
-                                <a href="#" class="Green-button">TIL 주소2</a>
+                                </div>
+                                <div class="card">
+                                    <img class="TeamPic" src="./inhoDetail/image/증명사진.jpg"
+                                        alt="TeamPicture">
+                                    <p>이인호</p>
+                                    <a href="https://inho9979.tistory.com" class="Green-button"><img class = "TIL-Img" src ="./img/TIL.png"></a>
 
-                            </div>
-                            <div class="card">
-                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
-                                    alt="TeamPicture">
-                                <p>이름3</p>
-                                <a href="#" class="Green-button">TIL 주소3</a>
+                                </div>
+                                <div class="card">
+                                    <img class="TeamPic" src="./youngju/image/profile.jpg"
+                                        alt="TeamPicture">
+                                    <p>최영주</p>
+                                    <a href="https://moonnight0.tistory.com" class="Green-button"><img class = "TIL-Img" src ="./img/TIL.png"></a>
 
+                                </div>
+                                <div class="card">
+                                    <img class="TeamPic" src="./hongsungdo/image/hsd.jpg"
+                                        alt="TeamPicture">
+                                    <p>홍성도</p>
+                                    <a href="https://velog.io/@hsd9681/posts" class="Green-button"><img class = "TIL-Img" src ="./img/TIL.png"></a>
+                                </div>
+                                <div class="card">
+                                    <img class="TeamPic" src="./YongGeun/image/yonggeun.jpg"
+                                        alt="TeamPicture">
+                                    <p>홍용근</p>
+                                    <a href="https://pioneer8919.tistory.com" class="Green-button"><img class = "TIL-Img" src ="./img/TIL.png"></a>
+                                </div>
                             </div>
-                            <div class="card">
-                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
-                                    alt="TeamPicture">
-                                <p>이름4</p>
-                                <a href="#" class="Green-button">TIL 주소4</a>
-                            </div>
-                            <div class="card">
-                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
-                                    alt="TeamPicture">
-                                <p>이름5</p>
-                                <a href="#" class="Green-button">TIL 주소5</a>
-                            </div>
+                            <span class="slider-rightBtn sliderBtn"></span>
                         </div>
-                        <span class="slider-rightBtn sliderBtn"></span>
+                        
                     </div>
+                    
                 </div>
+                
             </div>
-
 
         </div>
     </div>
