@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/bootstrap-to-do-list.min.css" />
+    <title>Team Dashboard</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let leftBtn = [...document.getElementsByClassName("slider-leftBtn")];
+            let rightBtn = [...document.getElementsByClassName("slider-rightBtn")];
+            let slider = [...document.querySelectorAll(".card-container")];
+
+            slider.forEach((item, i) => {
+                let containerDimension = item.getBoundingClientRect().width;
+                if ((item.childElementCount * 350) < (containerDimension + 100)) {
+                    rightBtn[i].style.display = 'none';
+                    leftBtn[i].style.display = 'none';
+                    item.style.justifyContent = 'space-around';
+                }
+                leftBtn[i].style.display = "none";
+                rightBtn[i].addEventListener('click', () => {
+                    item.scrollLeft += containerDimension;
+                    leftBtn[i].style.display = 'block';
+                });
+                leftBtn[i].addEventListener('click', () => {
+                    item.scrollLeft -= containerDimension;
+                    rightBtn[i].style.display = 'block';
+                });
+                item.addEventListener('scroll', () => {
+                    if (item.offsetWidth + item.scrollLeft >= (item.scrollWidth - 100)) {
+                        rightBtn[i].style.display = 'none';
+                        leftBtn[i].style.display = 'block';
+                    } else if (item.scrollLeft == 0) {
+                        leftBtn[i].style.display = 'none';
+                        rightBtn[i].style.display = 'block';
+                    } else if (item.scrollLeft > 0) {
+                        leftBtn[i].style.display = 'block';
+                    }
+                    if (item.offsetWidth + item.scrollLeft < (item.scrollWidth - 50)) {
+                        rightBtn[i].style.display = 'block';
+                    }
+                });
+
+                const slidingFunction = () => {
+                    if (item.offsetWidth + item.scrollLeft >= (item.scrollWidth - 100)) {
+                        item.scrollLeft = 0;
+                    }
+                    if (item.offsetWidth + item.scrollLeft < (item.scrollWidth - 50)) {
+                        item.scrollLeft += containerDimension;
+                    }
+                };
+
+                setInterval(() => slidingFunction(), 5000);
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+
+        }
+
+        header {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            padding: 10 auto;
+            margin: 0 auto;
+        }
+
+        .left-column {
+            width: 50%;
+            padding: 20px;
+            margin: 10px 10px;
+            height: 100%;
+        }
+
+        .right-column {
+            width: 50%;
+            padding: 20px;
+
+            margin: 30px 10px 10px 10px;
+            border-radius: 5px;
+            background-color: #000000;
+
+        }
+
+        .reqular {
+            font-family: Platypi;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        h2 {
+            margin-top: 10;
+            color: aliceblue;
+            font-family: Platypi;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        p {
+            margin-bottom: 7px;
+            font-size: 20px;
+
+        }
+
+        .team-info-box1 {
+            border: 1px solid #ccc;
+            background-color: #FFFFE0;
+            height: 7%;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .team-info-box1 p {
+
+            font-family: Do Hyeon;
+        }
+
+        .team-info-box2 {
+            border: 1px solid #ccc;
+            background-color: #FFFFE0;
+            height: 15%;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .team-info-box2 p {
+            font-family: Jua;
+            color: #000000;
+        }
+
+        .team-info-box3 {
+            border: 1px solid #ccc;
+            background-color: #FFFFE0;
+            height: 35%;
+            border-radius: 5px;
+            padding: 30px 20px 20px 20px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .team-tags1 {
+            color: #666;
+        }
+
+        .team-tags2 {
+            color: #666;
+        }
+
+        .team-tags3 {
+            color: black;
+        }
+
+        #TIL-box {
+            z-index: 0;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            height: 68vh;
+
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 10px 30px 10px;
+        }
+
+
+        button {
+            display: block;
+            margin: 30px 30px;
+            height: 50px;
+            padding: 8px 8px;
+            width: 10%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button span {
+            color: white;
+            font-size: 20px;
+        }
+
+        .TeamPic {
+            border-radius: 50%;
+            width: 60%;
+        }
+
+        .FlipCardcontainer {
+            margin: 0px auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*카드슬라이드 전체사이즈*/
+        .slider-container {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        /*scroll속성모음*/
+        .card-container {
+            overflow-x: auto;
+            display: grid;
+            grid-auto-flow: column;
+            overscroll-behavior-inline: contain;
+            scroll-behavior: smooth;
+            max-height: 68vh;
+            /* 최대 높이를 지정하여 카드가 화면을 벗어나지 않도록 함 */
+            scroll-snap-type: inline mandatory;
+            scroll-padding-inline: 1rem;
+            align-items: center;
+        }
+
+        .card {
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            width: 900px;
+            height: 600px;
+            /* 카드 높이 조정 */
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 10px;
+            font-size: 30px;
+            letter-spacing: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            transition: all 0.5s;
+        }
+
+        .card p,
+        .card a {
+            word-wrap: break-word;
+            /* 텍스트가 카드의 너비에 맞게 줄 바꿈되도록 설정 */
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 300px;
+            /* 원하는 크기로 설정 */
+            height: 300px;
+            /* 원하는 크기로 설정 */
+            object-fit: cover;
+            /* 이미지가 고정된 크기에 맞추어질 수 있도록 설정 */
+            margin-top: -20px;
+            /* 이미지를 위로 이동시키는 상단 마진 설정 */
+        }
+
+        .card p {
+            margin-top: 20px;
+        }
+
+
+        /*scrollbar숨기기 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 화살표 속성 */
+        .sliderBtn {
+            width: 40px;
+            height: 40px;
+            border-top: 10px solid black;
+            border-left: 10px solid black;
+            position: absolute;
+            cursor: pointer;
+            top: 40%;
+        }
+
+        /* border모양을 돌려서 화살표모양만들기 */
+        .slider-leftBtn {
+            transform: rotate(-45deg);
+            left: 1rem;
+        }
+
+        .slider-rightBtn {
+            transform: rotate(135deg);
+            right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onClick="location.href='mainPAGENAME.html'"><span>Home</span></button>
+    </header>
+
+    <div class="container">
+        <div class="left-column">
+
+            <h2>Team</h2>
+            <div class="team-info-box1">
+                <div class="team-tags1">
+                    <p>#능력자 #열정 #전공자 #성장 #협력</p>
+                </div>
+
+            </div>
+            <h2>Goal</h2>
+            <div class="team-info-box2">
+                <div class="team-tags2">
+                    <p>우리 팀, 함께 대기업의 문을 열어요!</p>
+                    <p>함께 뛰어난 결과물을 이뤄내며 성장하고, 꿈을 이루는 여정을 함께 합니다.</p>
+                    <p>함께라면 더 높이, 함께라면 더 멀리!!</p>
+
+                </div>
+            </div>
+            <h2>Team Rule</h2>
+            <div class="team-info-box3">
+                <div class="team-tags3">
+                    <p>- 점심시간 13 : 00 ~ 14 : 00</p>
+                    <p>- 저녁시간 18 : 00 ~ 19 : 00</p>
+                    <p>- 하루 일정 예시</p>
+                    <p>- 오전 9시 30분 : 출석체크 후 하루 계획 회의</p>
+                    <p>- 오후 2시 및 7시 : 진척도, 문제점 공유, 코드 리뷰</p>
+                    <p>- 오후 8시 40분 오늘 학습한 내용 또는 개발 진척도 확인</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <!--<div class="#TIL-box-title">
+                TIL Link 
+            </div>-->
+            <div id="TIL-box">
+                <div class="FlipCardcontainer">
+                    <div class="slider-container">
+                        <span class="slider-leftBtn sliderBtn"></span>
+                        <div class="card-container" id="slider">
+                            <div class="card">
+                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+                                    alt="TeamPicture">
+                                <p>이름1</p>
+                                <a href="#" class="Green-button">TIL 주소1</a>
+
+                            </div>
+                            <div class="card">
+                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+                                    alt="TeamPicture">
+                                <p>이름2</p>
+                                <a href="#" class="Green-button">TIL 주소2</a>
+
+                            </div>
+                            <div class="card">
+                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+                                    alt="TeamPicture">
+                                <p>이름3</p>
+                                <a href="#" class="Green-button">TIL 주소3</a>
+
+                            </div>
+                            <div class="card">
+                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+                                    alt="TeamPicture">
+                                <p>이름4</p>
+                                <a href="#" class="Green-button">TIL 주소4</a>
+                            </div>
+                            <div class="card">
+                                <img class="TeamPic" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+                                    alt="TeamPicture">
+                                <p>이름5</p>
+                                <a href="#" class="Green-button">TIL 주소5</a>
+                            </div>
+                        </div>
+                        <span class="slider-rightBtn sliderBtn"></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
