@@ -73,7 +73,7 @@ body {
     justify-content: center;
 }
 
-.skills-image>img {
+.skills-image>div>img {
     width: 50px;
     height: 50px;
 }
@@ -115,6 +115,7 @@ body {
 
 .container-right .about-me-content {
     margin-top: 60px;
+
 }
 
 .container .container-right .team-style {
@@ -139,4 +140,12 @@ body {
 .sns-content {
     display: flex;
     gap: 50%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.overflow-scroll {
+    height: 65px;
 }
