@@ -27,19 +27,19 @@ body{
   background-position: center;
 }
 .hong:hover{
-  background-image: url('/hongsungdo/image/hsd.jpg') 
+  background-image: url('./hongsungdo/image/hsd.jpg') 
 }
 .inho:hover{
-  background-image: url('/inhoDetail/image/증명사진.jpg') 
+  background-image: url('./inhoDetail/image/증명사진.jpg') 
 }
 .kimchaemin:hover{
-  background-image: url('/kimchaemin/image/profile.png') 
+  background-image: url('./kimchaemin/image/profile.png') 
 }
 .yongguen:hover{
-  background-image: url('/YongGeun/image/yonggeun.jpg') 
+  background-image: url('./YongGeun/image/yonggeun.jpg') 
 }
 .youngju:hover{
-  background-image: url('/youngju/image/profile.jpg') 
+  background-image: url('./youngju/image/profile.jpg') 
 }
 .square:hover{
   background-size: cover;
@@ -105,6 +105,6 @@ p{
   color:white;
   position:absolute;
   bottom:0;
-  margin-left:50%;
+  margin-left:45%;
   font-size:30px;
 }
