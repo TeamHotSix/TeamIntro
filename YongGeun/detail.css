@@ -132,14 +132,14 @@ body {
     width: 50px;
     height: 50px;
 }
-ㄴ
+
 .container .container-right .sns-content {
     height: 47px;
 }
 
 .sns-content {
     display: flex;
-    gap: 90px;
+    gap: 50%;
 }
 
 ::-webkit-scrollbar {
@@ -147,5 +147,5 @@ body {
 }
 
 .overflow-scroll {
-    height: 65px;
+    height: 100px;
 }

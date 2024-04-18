@@ -50,6 +50,8 @@ body {
 .container-left>img {
     width: 300px;
     height: 300px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     margin: 0 auto 0 auto;
 }
@@ -139,7 +141,7 @@ body {
 
 .sns-content {
     display: flex;
-    gap: 90px;
+    gap: 50%;
 }
 
 ::-webkit-scrollbar {
